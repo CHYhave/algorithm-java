@@ -23,6 +23,17 @@ public class ArrayUtils {
         return ret;
     }
 
+    public static List<Integer> buildRangeList(int min, int max) {
+        if (min > max) {
+            return new ArrayList<>();
+        }
+        ArrayList<Integer> ret = new ArrayList<>();
+        for (int i = max; i >= min; i--) {
+            ret.add(i);
+        }
+        return ret;
+    }
+
     public static void assertArrayAsc(List<Integer> arr) {
         for (int i = 1; i < arr.size(); i++) {
             if (arr.get(i) < arr.get(i-1)) {

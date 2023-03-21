@@ -1,9 +1,6 @@
 package com.algorithm.test.ch1;
 
-import com.algorithm.ch1.Benchmark;
-import com.algorithm.ch1.InsertSort;
-import com.algorithm.ch1.MergeSort;
-import com.algorithm.ch1.Sort;
+import com.algorithm.ch1.*;
 import com.algorithm.utils.ArrayUtils;
 import org.junit.Test;
 
@@ -41,9 +38,20 @@ public class TestAndVerify {
      * 1000_0000 5406ms
      */
     @Test
-    public void  testMergeSort() {
+    public void testMergeSort() {
         MergeSort mergeSort = new MergeSort();
         testSort(mergeSort, 10000000);
+    }
+
+    /**
+     * 10_0000   32ms
+     * 100_0000  719ms
+     * 1000_0000 10548ms
+     */
+    @Test
+    public void testHeapSort() {
+        HeapSort heapSort = new HeapSort();
+        testSort(heapSort, 10000000);
     }
 
     /**

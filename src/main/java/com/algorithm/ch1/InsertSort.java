@@ -2,10 +2,7 @@ package com.algorithm.ch1;
 
 import com.algorithm.utils.ArrayUtils;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * @author Chen haoyu
@@ -45,7 +42,7 @@ public class InsertSort implements Sort{
         return list;
     }
 
-    public void move(List<Integer> list, int moveBegin, int moveEnd) {
+    private void move(List<Integer> list, int moveBegin, int moveEnd) {
         if (moveBegin > moveEnd) {
             return;
         }
@@ -54,7 +51,7 @@ public class InsertSort implements Sort{
         }
     }
 
-    public int binarySearch(List<Integer> list, int begin, int end,  int target) {
+    private int binarySearch(List<Integer> list, int begin, int end,  int target) {
         int l = begin, r = end;
         int ret = -1;
         while (l <= r) {
