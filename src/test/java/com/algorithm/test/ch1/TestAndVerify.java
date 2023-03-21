@@ -1,12 +1,13 @@
-package com.algorithm.ch1;
+package com.algorithm.test.ch1;
 
+import com.algorithm.ch1.Benchmark;
+import com.algorithm.ch1.InsertSort;
+import com.algorithm.ch1.MergeSort;
+import com.algorithm.ch1.Sort;
 import com.algorithm.utils.ArrayUtils;
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
-import java.util.stream.Collectors;
 
 /**
  * @author Chen haoyu
@@ -53,6 +54,6 @@ public class TestAndVerify {
     @Test
     public void  testBenchmark() {
         Benchmark mergeSort = new Benchmark();
-        testSort(mergeSort, 10000000);
+        testSort(mergeSort, 100000);
     }
 }
