@@ -17,6 +17,7 @@ public class HeapSort implements Sort {
     public static void main(String[] args) {
         HeapSort heapSort = new HeapSort();
         List<Integer> list = ArrayUtils.buildRangeList(0, 10);
+//        list = ArrayUtils.generatorArray(10);
         heapSort.sort(list);
         ArrayUtils.assertArrayAsc(list);
     }
@@ -31,8 +32,10 @@ public class HeapSort implements Sort {
             buildMaxHeap(list, i, size);
         }
 
+        System.out.println(list);
+
         for (int i = size - 1; i >= 0; i--) {
-            swap(list, 0, i);
+            ArrayUtils.swap(list, 0, i);
             buildMaxHeap(list,0, i);
         }
         return list;
@@ -55,9 +58,4 @@ public class HeapSort implements Sort {
         list.set(i, temp);
     }
 
-    private void swap(List<Integer> list, int i, int j) {
-        int temp = list.get(i);
-        list.set(i, list.get(j));
-        list.set(j, temp);
-    }
 }

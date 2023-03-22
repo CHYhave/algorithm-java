@@ -55,6 +55,17 @@ public class TestAndVerify {
     }
 
     /**
+     * 10_0000   33ms
+     * 100_0000  194ms
+     * 1000_0000 5018ms
+     */
+    @Test
+    public void testQuickSort() {
+        QuickSort quickSort = new QuickSort();
+        testSort(quickSort, 10000000);
+    }
+
+    /**
      * 10_0000   29ms
      * 100_0000  213ms
      * 1000_0000 4569ms
