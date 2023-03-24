@@ -1,6 +1,5 @@
-package com.algorithm.ch1;
+package com.algorithm.ch1sort;
 
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 

@@ -1,6 +1,6 @@
-package com.algorithm.test.ch1;
+package com.algorithm.test.ch1sort;
 
-import com.algorithm.ch1.*;
+import com.algorithm.ch1sort.*;
 import com.algorithm.utils.ArrayUtils;
 import org.junit.Test;
 

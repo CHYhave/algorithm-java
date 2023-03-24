@@ -1,8 +1,6 @@
 package com.algorithm.utils;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -65,5 +63,14 @@ public class ArrayUtils {
         int temp = list.get(i);
         list.set(i, list.get(j));
         list.set(j, temp);
+    }
+
+
+
+    public static void assertSelectEql(List<Integer> list, int target, int k) {
+        Collections.sort(list);
+        if (list.get(k - 1) != target) {
+            throw new AssertionError("Expect [" + list.get(k - 1) + "], but get [" + target + "]");
+        }
     }
 }

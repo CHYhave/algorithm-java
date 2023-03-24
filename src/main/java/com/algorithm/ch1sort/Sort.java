@@ -1,4 +1,4 @@
-package com.algorithm.ch1;
+package com.algorithm.ch1sort;
 
 import java.util.List;
 
